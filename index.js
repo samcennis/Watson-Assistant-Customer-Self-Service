@@ -63,7 +63,7 @@ if (!settings.adminAuth) {
             var app = express();
             app.use(bodyParser.json());
             app.get("/", function(req,res) {
-                res.sendFile(path.join(__dirname,"public","first-run.html"));
+                res.sendFile(path.join(__dirname,"public/node-red-setup","first-run.html"));
             });
             app.post("/setup", function(req,res) {
                 if (req.body.adminAuth && req.body.adminAuth.password) {
