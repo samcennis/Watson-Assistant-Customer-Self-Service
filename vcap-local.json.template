@@ -1,0 +1,11 @@
+{
+  "services": {
+    "cloudantNoSQLDB": [
+      {
+        "name": "assistant-customer-self-service-cloudantNoSQLDB",
+        "label": "cloudantNoSQLDB",
+        "credentials": {}
+      }
+    ]
+  }
+}

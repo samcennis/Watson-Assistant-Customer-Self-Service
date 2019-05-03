@@ -59,3 +59,6 @@ typings/
 
 # next.js build output
 .next
+
+# vcap-local.json file for Cloudant connection from local
+vcap-local.json

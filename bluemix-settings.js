@@ -20,7 +20,18 @@ var util = require("util");
 var fs = require("fs");
 
 var cfenv = require("cfenv");
-var appEnv = cfenv.getAppEnv(options={vcapFile:"cloudant-credentials.json"});
+
+//--- Environment Vars for running locally---
+var vcapLocal = null
+try {
+  vcapLocal = require("./vcap-local.json")
+}
+catch (e) {}
+
+var appEnvOpts = vcapLocal ? {vcap:vcapLocal} : {}
+//-------------------------------------------
+
+var appEnv = cfenv.getAppEnv(appEnvOpts);
 
 var userDir = path.join(__dirname,".node-red");
 // Ensure userDir exists - something that is normally taken care of by
