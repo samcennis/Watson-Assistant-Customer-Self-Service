@@ -62,3 +62,9 @@ typings/
 
 # vcap-local.json file for Cloudant connection from local
 vcap-local.json
+
+# addCognosIFrame for URL to an instance of Cognos
+addCognosIFrame.js
+
+# temporary - do not check in Node-RED flow yet
+import-node-red-flow/
