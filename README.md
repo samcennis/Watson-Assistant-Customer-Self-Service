@@ -21,10 +21,10 @@ Use this sample app to understand the basics of what's needed to augment your ap
 * Login/Register for IBM Cloud account
 
 ## Set up Watson Assistant
-TODO: Instructions to provision Watson Assistant and import the Assistant Dialog Skill. 
+TODO: Instructions to provision Watson Assistant and import the Assistant Dialog Skill. (/import-watson-assistant) 
 
 ## Set up Watson Discovery
-TODO: Instructions to set up Watson Discovery, ingest Document, SDU. Go back to Assistant and configure Search Skill.
+TODO: Instructions to set up Watson Discovery, ingest Document, SDU. Go back to Assistant and configure Search Skill. (/import-watson-discovery)
 
 ## Set Up the Node-RED App
 Follow these instructions to get the app running in your own IBM Cloud account.
@@ -46,7 +46,7 @@ Follow these instructions to get the app running in your own IBM Cloud account.
     10 Jul 21:59:19 - [couchstorage] No default credentials found```
 * Visit `localhost:1880` in your browser
     * TODO: Steps to set up Node-RED editor
-* Fill in credentials in the Node-RED flow.
+* Important: Fill in WA credentials in the Node-RED flow.
 * App should now be running.
     
 ### Push the app to IBM Cloud
@@ -63,5 +63,8 @@ Follow these instructions to get the app running in your own IBM Cloud account.
     3. The app should now be available at https://<YOUR_APP_NAME>.mybluemix.net
 * Configure "Connection" to the Cloudant database(?) Restage needed?
  
- ### Optional configurations
- * Use /public/js/addCognosIFrame.js.template to put in Cognos content
+### Optional configurations
+ * Use /public/js/addCognosIFrame.js.template to embed your own Cognos content in an iframe.
+
+### Demo Flow
+* Walk-through demo flow.

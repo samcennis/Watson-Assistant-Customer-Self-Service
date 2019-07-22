@@ -446,7 +446,8 @@
   }
   
   .options-list {
-    color: #8d25e8;
+    /*color: #8d25e8;*/
+    color: #45A5D8;
     cursor: pointer;
   }
   
