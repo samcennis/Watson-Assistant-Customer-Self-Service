@@ -16,16 +16,18 @@
     <body>
         <div class="outer">
             <div class="header">
-                <a href="#default" class="logo">Acme Software Solutions</a>
+                <a href="#default" class="logo">ACME Supply Chain Analytics</a>
                 <div class="header-right">
-                    <a class="active" href="#home">Home</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#about">About</a>
+                    <a class="active" href="#home" id="home-button">Home</a>
+                    <a href="#dashboard" id="dashboard-button">Dashboard</a>
+                    <a href="#docs">Docs</a>
+                    <a href="#manage">Manage</a>
                 </div>
             </div>
-            <div id="mainContent" class="content">
-          <!--  <iframe id="content-iframe" id="mainContent" class="content" src="http://services-uscentral.skytap.com:16096/bi/?perspective=dashboard&amp;pathRef=.public_folders%2FChangepoint%2BClient%2BContent%2FProduct%2BSales%2BDashboard%2B-%2BComplete&amp;ui_appbar=false&amp;ui_navbar=false&amp;shareMode=embedded&amp;action=view&amp;mode=dashboard&amp;subView=model00000168ab5fa109_00000000" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe> -->
-            </div>
+            
+            <div id="homeContent" class="content"><img src="/img/acme-supply-chain-home.png"></div>
+
+            <div id="dashboardContent" class="content" style="display:none;"></div>
 
             <button class="open-button" onclick="openForm()">Chat</button>
 

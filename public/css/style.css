@@ -1,10 +1,10 @@
-/* w3schools "How TO - Responsive Header
+/* Inspired by w3schools "How TO - Responsive Header
 https://www.w3schools.com/howto/howto_css_responsive_header.asp */
 
 /* Style the header with a grey background and some padding */
 .header {
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: #EAEAEA;
     padding: 20px 10px;
   }
   
@@ -34,7 +34,7 @@ https://www.w3schools.com/howto/howto_css_responsive_header.asp */
   
   /* Style the active/current link*/
   .header a.active {
-    background-color: dodgerblue;
+    background-color: #45A5D8;
     color: white;
   }
   
@@ -55,10 +55,8 @@ https://www.w3schools.com/howto/howto_css_responsive_header.asp */
     }
   }
 
-  /* w3schools "How TO - Popup Chat Window
+  /* Inspired by w3schools "How TO - Popup Chat Window
 https://www.w3schools.com/howto/howto_js_popup_chat.asp */
-
-{box-sizing: border-box;}
 
 /* Button used to open the chat form - fixed at the bottom of the page */
 .open-button {
@@ -110,7 +108,7 @@ https://www.w3schools.com/howto/howto_js_popup_chat.asp */
 
 /* Set a style for the submit/login button */
 .form-container .btn {
-  background-color: #4CAF50;
+  background-color: #45A5D8;
   color: white;
   padding: 16px 20px;
   border: none;
@@ -122,7 +120,7 @@ https://www.w3schools.com/howto/howto_js_popup_chat.asp */
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
-  background-color: red;
+  background-color: #D47C37;
 }
 
 /* Add some hover effects to buttons */
@@ -161,4 +159,13 @@ html, body {
   object-position: 0% 0%;
   max-width: 100%;
   max-height: 100%;
+}
+
+/* Make the Support Agent Dashboard page look different than main app */
+#agent-header {
+  background-color: lightsalmon;
+}
+
+#agent-header a {
+  color: white;
 }

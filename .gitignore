@@ -66,5 +66,8 @@ vcap-local.json
 # addCognosIFrame for URL to an instance of Cognos
 addCognosIFrame.js
 
-# temporary - do not check in Node-RED flow yet
-import-node-red-flow/
+# Special (custom) manifest files
+manifest-*
+
+# VSCode
+.vscode

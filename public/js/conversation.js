@@ -137,6 +137,11 @@ var ConversationPanel = (function () {
           });
         }
         setResponse(responses, isUser, chatBoxElement, 0, true);
+
+        //Check for Agent transfer context variable set on each response from Watson.
+        if (!isUser) {
+          Api.checkForAgentTransfer(newPayload);
+        }
       }
     }
   
@@ -338,4 +343,7 @@ var ConversationPanel = (function () {
         Common.fireEvent(inputBox, 'input');
       }
     }
+
+    
+
   }());

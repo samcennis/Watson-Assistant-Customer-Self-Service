@@ -13,6 +13,7 @@ var Api = (function() {
     return {
       sendRequest: sendRequest,
       getSessionId: getSessionId,
+      checkForAgentTransfer: checkForAgentTransfer,
   
       // The request/response getters/setters are defined here to prevent internal methods
       // from calling the methods without any of the callbacks that are added elsewhere.
@@ -93,4 +94,22 @@ var Api = (function() {
       // Send request
       http.send(params);
     }
+
+
+    function checkForAgentTransfer(newPayload){
+      console.log(newPayload);
+      var main_skill = newPayload.context.skills['main skill'];
+      if (main_skill.user_defined && main_skill.user_defined.connect_to_agent){
+        //console.log("ROUTE TO AGENT.");
+        
+        //Demo purposes -- Delay the route to agent by 8 seconds in order to display Transfer message to user before opening Agent dashboard.
+        setTimeout(function(){
+          var redirectWindow = window.open('/agent-dashboard.html?session_id=' + sessionId , '_blank');
+          redirectWindow.location;
+        }, 6000);
+      }
+      //console.log("Checked but no agent transfer");
+    }
+
+
   }());
