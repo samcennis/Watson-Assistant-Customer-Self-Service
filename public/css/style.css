@@ -164,6 +164,7 @@ html, body {
 /* Make the Support Agent Dashboard page look different than main app */
 #agent-header {
   background-color: lightsalmon;
+  overflow: visible;
 }
 
 #agent-header a {
