@@ -3017,7 +3017,7 @@
       "output": {
         "generic": [
           {
-            "query": "",
+            "query": "<? input.text ?>",
             "filter": "",
             "query_type": "natural_language",
             "response_type": "search_skill"
