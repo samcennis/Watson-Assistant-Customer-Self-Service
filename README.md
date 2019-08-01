@@ -23,7 +23,7 @@ Use this sample app to understand the basics of what's needed to augment your ap
 * [Follow instructions](https://cloud.ibm.com/docs/services/assistant-data?topic=assistant-data-skill-dialog-add) to import the sample [Dialog Skill](/import-watson-assistant/acme-dialog-skill.json).
 
 ## Set up Watson Discovery
-* Provision a "Lite" plan of the Watson Discovery service: https://cloud.ibm.com/catalog/services/watson-assistant
+* Provision a "Lite" plan of the Watson Discovery service: https://cloud.ibm.com/catalog/services/discovery
 * Follow the instructions in the [Discovery Getting Started tutorial](https://cloud.ibm.com/docs/services/discovery?topic=discovery-getting-started), however instead of uploading the Watson Explorer Getting Started Guide to your Collection, uploade the included [Cognos Data Modules Guide](/import-watson-discovery/acme-discovery-doc.pdf).
 * Once you've created your Discovery Collection, you can [configure a Search Skill in Watson Assistant](https://cloud.ibm.com/docs/services/assistant?topic=assistant-skill-search-add). The [sample Dialog Skill](import-watson-assistant/acme-dialog-skill.json) will by default direct user questions about Data Modules to a Search Skill in your Assistant. Add you Search Skill to the same Assistant as the sample Dialog Skill.
 
