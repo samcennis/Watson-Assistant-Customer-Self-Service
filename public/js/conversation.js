@@ -274,6 +274,31 @@ var ConversationPanel = (function () {
           type: gen.response_type,
           innerhtml: title + description + list
         });
+      } //Handle Search Skill results 
+      else if (gen.response_type === 'search') {
+        title = gen.header;
+        //Push the Search Skill "header"
+        responses.push({
+          type: gen.response_type,
+          innerhtml: title
+        });
+        //Specify number of Search Skill results that should display (default is 3, can specify up to 10)
+        const NUM_OF_SEARCH_SKILL_RESULTS = 3;
+        for (var index in gen.results){  
+          if (index < NUM_OF_SEARCH_SKILL_RESULTS){
+            var searchResult = gen.results[index];
+            var resultTitle = '';
+            var resultNum = parseInt(index) + 1;
+            if (searchResult.title){
+              var parsedTitle = searchResult.title = searchResult.title.replace(/[\[\]"]+/g,'');
+              resultTitle = "<b><a href='#'>" + parsedTitle + "</a></b><br>";
+            }      
+            responses.push({
+              type: gen.response_type,
+              innerhtml: "<b>" + resultNum + ". </b>" + resultTitle + searchResult.highlight.text[0] + " ...<br><br>"
+            });
+          }
+        }
       }
     }
   

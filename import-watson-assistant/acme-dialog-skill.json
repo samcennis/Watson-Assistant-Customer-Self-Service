@@ -2414,6 +2414,7 @@
       "minor_version": "2018-09-20"
     }
   },
+  "skill_id": "4e828a57-39cb-4de7-bb4d-491c74dad8a7",
   "description": "",
   "dialog_nodes": [
     {
@@ -3026,11 +3027,6 @@
       },
       "parent": "node_4_1563154482581",
       "metadata": {},
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "node_1_1563155505101"
-      },
       "conditions": "#Platform_Data_Modeling",
       "dialog_node": "node_6_1563476558344",
       "previous_sibling": "node_4_1563072714986"
