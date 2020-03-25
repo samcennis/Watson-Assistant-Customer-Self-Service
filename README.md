@@ -15,7 +15,7 @@ This repository includes:
 Use this sample app to understand the basics of what's needed to augment your application with an engaging AI-infused self-service support experience using Watson Assistant on IBM Cloud.
 
 ## Register / Login to IBM Cloud
-* Create an IBM Cloud account or login to your existing account: https://cloud.ibm.com/login 
+* Create an IBM Cloud account or login to your existing account: https://cloud.ibm.com/login
 
 ## Set up Watson Assistant
 * Provision a "Lite" plan of the Watson Assistant service: https://cloud.ibm.com/catalog/services/watson-assistant
@@ -24,7 +24,10 @@ Use this sample app to understand the basics of what's needed to augment your ap
 
 ## Set up Watson Discovery
 * Provision a "Lite" plan of the Watson Discovery service: https://cloud.ibm.com/catalog/services/discovery
-* Follow the instructions in the [Discovery Getting Started tutorial](https://cloud.ibm.com/docs/services/discovery?topic=discovery-getting-started), however instead of uploading the Watson Explorer Getting Started Guide to your Collection, uploade the included [Cognos Data Modules Guide](/import-watson-discovery/acme-discovery-doc.pdf).
+* Follow the instructions in the [Discovery Getting Started tutorial](https://cloud.ibm.com/docs/services/discovery?topic=discovery-getting-started), however instead of uploading the Watson Explorer Getting Started Guide to your Collection, upload the included [Cognos Data Modules Guide](/import-watson-discovery/acme-discovery-doc.pdf).
+  * When you go through "Step 4: Annotate your document", the following image is an annotation reference to follow that will provide generally useful results when splitting the document on the "subtitle" field. I recommend submitting as many pages as possible to ensure that the system has learned properly. Under the "Manage Fields", switch off all fields under "Identify fields to index" except for "subtitle", "text", and "title". 
+  ![alt text](doc/images/WatsonDiscovery-DocumentAnnotationReference.png?raw=true)
+  ![alt text](doc/images/WatsonDiscovery-ManageFields.png?raw=true)
 * Once you've created your Discovery Collection, you can [configure a Search Skill in Watson Assistant](https://cloud.ibm.com/docs/services/assistant?topic=assistant-skill-search-add). The [sample Dialog Skill](import-watson-assistant/acme-dialog-skill.json) will by default direct user questions about Data Modules to a Search Skill in your Assistant. Add you Search Skill to the same Assistant as the sample Dialog Skill.
 
 ## Set Up the Sample Application ("ACME Solutions")
@@ -61,8 +64,8 @@ Follow these instructions to get the app running in your own IBM Cloud account.
     * WATSON ASSISTANT CONNECTION INFO: Fill in Watson Assistant apikey, Assistant ID, and Workspace ID (for your Dialog Skill).
     * Both Watson Assistant API Nodes: Fill in the apikey field.
 * Click Deploy (upper right) to re-deploy the Node-RED flow.
-* The app should now be running locally at localhost:1880. 
-    
+* The app should now be running locally at localhost:1880.
+
 ### Push the Sample Application to run on IBM Cloud
 * In [manifest.yml](/manifest.yml)
     * Change "assistant-customer-self-service" to <YOUR_APP_NAME>
@@ -82,6 +85,6 @@ Follow these instructions to get the app running in your own IBM Cloud account.
     * This will restage your application. Wait for the app to be running again.
 * Check https://<YOUR_APP_NAME>.mybluemix.net/red to confirm you see the same Node-RED flow as you imported locally. If not, then your app did not successfully conenct to Cloudant.
 * The app should now be available at https://<YOUR_APP_NAME>.mybluemix.net
- 
+
 ### Optional UI configuration
 * You can use /public/js/addCognosIFrame.js.template to embed your own Cognos content in an iframe. Just add a URL.
