@@ -14,6 +14,9 @@ This repository includes:
 
 Use this sample app to understand the basics of what's needed to augment your application with an engaging AI-infused self-service support experience using Watson Assistant on IBM Cloud.
 
+This webinar walks through demonstrated usage of this application.
+[![Alt text](https://img.youtube.com/vi/AKLD_IDBgOg/0.jpg)](https://www.youtube.com/watch?v=AKLD_IDBgOg)
+
 ## Register / Login to IBM Cloud
 * Create an IBM Cloud account or login to your existing account: https://cloud.ibm.com/login
 
