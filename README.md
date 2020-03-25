@@ -25,7 +25,7 @@ Use this sample app to understand the basics of what's needed to augment your ap
 ## Set up Watson Discovery
 * Provision a "Lite" plan of the Watson Discovery service: https://cloud.ibm.com/catalog/services/discovery
 * Follow the instructions in the [Discovery Getting Started tutorial](https://cloud.ibm.com/docs/services/discovery?topic=discovery-getting-started), however instead of uploading the Watson Explorer Getting Started Guide to your Collection, upload the included [Cognos Data Modules Guide](/import-watson-discovery/acme-discovery-doc.pdf).
-  * When you go through "Step 4: Annotate your document", the following image is an annotation reference to follow that will provide generally useful results when splitting the document on the "subtitle" field. I recommend submitting as many pages as possible to ensure that the system has learned properly. Under the "Manage Fields", switch off all fields under "Identify fields to index" except for "subtitle", "text", and "title". 
+  * When you go through "Step 4: Annotate your document", the following image is an annotation reference to follow that will provide generally useful results when splitting the document on the "subtitle" field. I recommend submitting as many pages as possible to ensure that the system has learned properly. Under the "Manage Fields", switch off all fields under "Identify fields to index" except for "subtitle", "text", and "title". This will ensure that irrelevant fields are not ingested. ("Copyright IBM Corp. 2015, 2018", which you've annotated as a "footer", would not be a very useful search result).
   ![alt text](doc/images/WatsonDiscovery-DocumentAnnotationReference.png?raw=true)
   ![alt text](doc/images/WatsonDiscovery-ManageFields.png?raw=true)
 * Once you've created your Discovery Collection, you can [configure a Search Skill in Watson Assistant](https://cloud.ibm.com/docs/services/assistant?topic=assistant-skill-search-add). The [sample Dialog Skill](import-watson-assistant/acme-dialog-skill.json) will by default direct user questions about Data Modules to a Search Skill in your Assistant. Add you Search Skill to the same Assistant as the sample Dialog Skill.
@@ -86,5 +86,9 @@ Follow these instructions to get the app running in your own IBM Cloud account.
 * Check https://<YOUR_APP_NAME>.mybluemix.net/red to confirm you see the same Node-RED flow as you imported locally. If not, then your app did not successfully conenct to Cloudant.
 * The app should now be available at https://<YOUR_APP_NAME>.mybluemix.net
 
-### Optional UI configuration
-* You can use /public/js/addCognosIFrame.js.template to embed your own Cognos content in an iframe. Just add a URL.
+### Optional UI configuration to display
+* You can use /public/js/addCognosIFrame.js.template to embed your own Cognos content in an iframe to display in the UI under the "Dashboard tab". Just add the URL to your Cognos Dashboard, and it will display in an iframe. (The URL must be accessible on the public internet.)
+
+### Optional Voice Agent configuration
+* You can enable a voice channel for the conversational assistant with the "Voice Agent for Watson" service on IBM Cloud, enabling end users to call a telephone number to communicate with it.
+* Follow the [Getting Started instructions](https://cloud.ibm.com/docs/services/voice-agent?topic=voice-agent-getting-started). I recommend following the instructions for creating a SIP trunk with Twilio under Step 2.
